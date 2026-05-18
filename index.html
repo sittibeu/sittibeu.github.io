@@ -565,7 +565,7 @@
       currentType = type;
       renderDynamicFields(type);
       REQUIRED = type === 'file'
-        ? FIELDS['file'].filter(f => f.id !== 'pdf_file' && f.id !== 'file_note').map(f => ({ id: f.id, label: f.label }))
+        ? FIELDS['file'].filter(f => f.id !== 'pdf_file' && f.id !== 'file_note' && f.id !== '_warn').map(f => ({ id: f.id, label: f.label }))
         : [...REQUIRED_BASE, ...FIELDS[type].map(f => ({ id: f.id, label: f.label }))];
       document.getElementById('typeSelect').style.display = 'none';
       document.getElementById('formWrap').style.display  = 'block';
